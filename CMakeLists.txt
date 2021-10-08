@@ -3,6 +3,7 @@ project(my-little-video-app C CXX)
 set(CMAKE_CXX_STANDARD 14)
 
 add_subdirectory(lib/glfw)
+add_subdirectory(lib/ffmpeg)
 
 add_definitions(-DGL_SILENCE_DEPRECATION)
 
@@ -22,4 +23,4 @@ else()
 endif()
 
 add_executable(my-little-video-app src/main.cpp)
-target_link_libraries(my-little-video-app glfw ${EXTRA_LIBS})
+target_link_libraries(my-little-video-app FFmpeg glfw ${EXTRA_LIBS})
